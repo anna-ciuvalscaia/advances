@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Checkbox Styled and Css game</title>
+    <style>
+    .big-circle {
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        border: 1px solid #777777;
+        float: left;
+    }
+    .small-circle {
+     width: 10px;
+     height: 10px;
+     border-radius: 100%;
+     background-color: white;
+     transform: translateX(5px) translateY(5px);
+
+    }
+    label { 
+    color: #777777; 
+    font-family: Arial; 
+    cursor: pointer;
+    }
+    label:hover > span {color: #444444;}
+    label:hover > .big-circle {border-color: #444444;}
+    span {margin-left: 10px;}
+    input {display: none;}
+    input:checked + .big-circle {
+    border: 1px solid orangered;
+    }
+    input:checked + .big-circle > .small-circle {
+        background-color: orangered;
+    }
+    input:checked +.big-circle + span {color: orangered;}
+
+article {
+    width: 90%; margin: auto; margin-top: 50px;
+    background-color: whitesmoke; padding: 10px;
+ }
+img {width: 100%;}
+h2 {text-align: center;}
+   p {
+       color: orangered; font-family: Arial;
+   font-family: cursive; margin-bottom: 0;
+   }
+   .ul_unu {float: left;}
+   .ul_doi {float: right;}
+  
+    </style>
+</head>
+<body>
+    <label>
+        <input type="checkbox">
+        <div class="big-circle">
+        <div class="small-circle"></div>
+        </div>
+       <span>Sunt de acord cu termenii si conditiile!</span>
+    </label>
+    
+    <article>
+        <a target="_blank" href="https://flukeout.github.io/"><h2>CSS Diner</h2></a>
+        
+        <ul class="ul_unu">
+            <li><p>Selector de tip: A</p>     
+            1) plate
+            <br>
+            2) bento</li>
+            
+           <li> <p>ID-Selector: #ID</p> 
+            3) #fancy</li>
+            
+            <li><p>Selector descendent: AB</p>
+            4) plate apple</li>
+            
+            <li><p>Combinatie descedent cu identificare: #id A </p>
+            5) #fancy pickle</li>
+            
+            <li><p>Selector de clase: .className</p> 
+            6) .small</li>
+            
+            <li><p>Combinatie selector cu clase: A.className</p>
+            7) orange.small</li>
+            
+            <li><p>Combinatie selector A cu selector cu clase:
+                <br> A>B.className</p>
+            8) bento>orange.small sau bento orange.small</li>
+            
+            <li><p>Combinatie prin virgula: A, B, ..., div</p>
+            9) plate, bento, div</li>
+            
+            <li><p>Combinatie elector universal *: A, B, * </p>
+            10) plate, bento, *</li>
+            
+            <li><p>Selector universal * : A*</p> 
+            11) plate *</li>
+            
+            <li><p>Selectorul Sibling alăturat: A + B</p> 
+            12) plate + apple</li>
+            
+            <li><p>Selectorul general din Sibling : A ~ B <br>
+            Selectorul Adiacent (A + B), <br>
+            cu excepția faptului că primește toate <br>
+            elementele următoare în loc de unul.</p> 
+            13) bento ~ pickle</li>
+            
+            <li><p>Child Selector: A > B </p>
+            14) plate > apple</li>
+            
+            <li><p>Pseudo selector primul copil   :first-child</p> 
+            15) orange:first-child</li>
+            
+            <li><p>Pseudo selector singurul copil   :only-child</p> 
+            16) plate :only-child</li>
+            
+            
+            <li><p>Pseudo selector ultimul copil   :last-child</p>
+            17) .small:last-child</li>
+            
+            
+            <li><p>Pseudo selector al N-lea copil   A:nth-child(n)</p>
+            18) plate:nth-child(3)</li>
+            </ul>
+
+            <ul class="ul_doi">
+            <li><p>Pseudo selector al N-lea pentru ultimul copil <br>   
+            A:nth-last-child(n)</p>
+            19) bento:nth-last-child(3)</li>
+            
+           <li><p> First of Type Selector (primul selector de tip) <br>
+            A:first-of-type</p>
+            20) apple:first-of-type</li>
+            
+            <li><p>Nth of Type Selector (al N-lea selector de tip) <br>
+            :nth-of-type(even or odd) par-impar</p>
+            21) plate:nth-of-type(even)</li>
+            
+           <li><p> Nth-of-type Selector with Formula :nth-of-type(An+B) <br>
+            fiecare al n-lea element, incepind cu elemntul n  (An+B)</p>
+            22) plate:nth-of-type(2n+3)</li>
+            
+           <li><p>Only of Type Selector (singurul element de tip) <br>
+            :only-of-type</p>
+            23) apple:only-of-type</li>
+            
+            <li><p>Last of Type Selector (ultimul element de tip) <br>
+            :last-of-type</p>
+            24) .small:last-of-type</li>
+            
+            <li><p>Empty Selector (selector-gol) :empty</p>
+            25) bento:empty</li>
+            
+           <li><p>Negation Pseudo-class (negare) :not(X)</p>
+            26) apple:not(.small)</li> 
+            
+           <li><p> Selector   [attribute]</p>
+            27) [for]</li> 
+            
+           <li> <p>Attribute Selector   A[attribute]</p>
+            28) plate[for]</li>
+            
+           <li><p> Attribute Value Selector  [attribute="value"]</p>
+            29) bento[for="Vitaly"]</li>
+            
+            <li><p>Attribute Starts With Selector <br>
+                (Atributul începe cu selectorul)
+            [attribute^="value"]</p>
+            30) [for^="Sa"]</li>
+            
+           <li><p> Attribute Ends With Selector <br>
+               (Atributul se termina cu selectorul) <br>
+            [attribute$="value"]</p>
+            31) [for$="ato"]</li>
+            
+            <li><p>Attribute Wildcard Selector <br>
+                (Atribut cu caractere specifice oriunde) <br>
+            [attribute*="value"]</p>
+            32) [for*="obb"] </li>
+        </ul>
+        <img src="images/joc_css_selectors.jpg" alt="css diner">
+    </article>
+</body>
+</html>

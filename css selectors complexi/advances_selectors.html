@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zxx">
+<head>
+    <meta charset="UTF-8">
+    
+    <title>Advanced Selectors CSS</title>
+    <style>
+        body {background-color: #333333; color: white; font-family: Arial, Helvetica, sans-serif;}
+       #buton {background-color: whitesmoke; padding: 20px;}
+       button {
+           padding: 10px; border-radius: 20px; border: none;
+           min-width: 100px; outline: none; color: white;
+           background-color: teal;
+           }
+           p {color: blanchedalmond;} 
+           
+     /*3. Next Neghbour (sel1+sel2+..+sel(n){})*/
+h2 + p {color:aquamarine}
+h2 + p + p {border: 1px solid red; padding: 5px; color: yellow;}
+
+/*4. Grouping  (sel1, sel2, ..., sel(n) {})*/
+button, a {margin-left: 30px;}
+h1, h2 {color: tomato;}
+
+/*5.intersection (sel1.className)*/
+p.cursive {color: violet; font-family: cursive; font-size: 20px;}
+h2:nth-last-of-type(2) {background-color: wheat;}
+button:first-child:hover {background-color: green;}
+button.second:hover {background-color: indigo;}
+
+/*6. attribute [attribute="value"]*/
+[href="https://www.youtube.com/"] {color: red; font-family: fantasy; font-size: large;}
+ 
+    
+  /*all / universal - combinat cu attribute*/ 
+  [href*="goo"] {color: brown; font-family: cursive; font-size: 20px;}
+  
+      </style>
+</head>
+<body>
+    <h1>Principal</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, provident. Quasi magnam error molestias ut odit. Nobis, laboriosam temporibus possimus repellendus porro in cum eius.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam enim explicabo voluptatum recusandae porro mollitia corrupti ipsam facere esse temporibus!</p>
+        <p class="cursive">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, ducimus? Dignissimos eos, ad soluta magni distinctio, velit modi vero totam dolorum quibusdam, accusantium voluptatem nulla pariatur alias veritatis quae. Ad explicabo error et harum consequuntur?</p>
+        <p class="cursive">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque quod delectus excepturi minus architecto cumque sapiente totam, amet fuga quasi doloribus ut expedita dolor neque odit aspernatur ex voluptate molestiae ipsa voluptatem aliquid aperiam! Voluptates nostrum aspernatur nobis praesentium id.</p>
+         
+        <div id="buton">
+        <button>Buton 1</button>
+         <button>Buton 2</button>
+         <button class="second">Buton 3</button>
+         <a href="https://www.youtube.com/">youtube 1</a>
+         <a href="https://www.google.com/">google</a>
+         <a href="https://www.youtube.com/">youtube 2</a>
+         <a href="https://translate.google.com/">translate.google</a>
+        </div>
+       
+    <h2>Primul</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam modi dolorem ea, similique a non totam provident ipsam, minus deleniti, tenetur inventore voluptatum alias. Non, praesentium! Natus adipisci, et possimus autem pariatur vero inventore enim. Perferendis, nisi atque itaque consectetur cumque quasi ab quae incidunt molestias quis repellat eius culpa.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit obcaecati beatae, quasi mollitia porro accusamus commodi odio aspernatur a eius placeat fugit voluptas officia, quibusdam nihil rerum maxime sed, expedita vitae eum fugiat vero hic!</p>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores molestias consequuntur numquam voluptatum sapiente necessitatibus est tempora vitae dignissimos quis possimus, sit, architecto nesciunt aspernatur alias excepturi in iusto? Voluptas, perspiciatis commodi! Id pariatur non neque distinctio tenetur reiciendis, maxime culpa incidunt eligendi, consequuntur quae consectetur voluptas blanditiis porro dicta, obcaecati inventore totam cum voluptatum.</div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, itaque ratione? Facere modi mollitia molestiae earum nam commodi fugit animi aperiam accusantium illo, alias placeat rerum molestias nobis, culpa odit, doloremque officia. Dignissimos facere quasi recusandae, expedita, modi voluptatibus sit repellat est ab delectus eius?</p>
+
+    
+    <h2>Al Doilea </h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos sed officiis nobis, iusto quas libero voluptas quam! In quas consequuntur optio esse, quibusdam exercitationem? Est.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis aperiam suscipit nam possimus nisi vitae dolorum voluptates rerum culpa alias tenetur ab aspernatur sed ipsum dignissimos, maxime, corrupti quasi earum a inventore quis omnis eum distinctio quas? Autem ipsa voluptates nulla corporis sit, magnam quaerat.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, eligendi at? Doloremque impedit illum eveniet fuga, dignissimos incidunt ipsam, molestiae ratione ducimus accusantium magni ipsum nesciunt voluptatibus eos quibusdam neque quasi, facilis fugit inventore in!</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam vel, ratione nisi vitae necessitatibus eos soluta cum similique exercitationem corrupti, modi error temporibus illo ipsa!</p>
+  
+    
+    <h2>Al Treilea</h2>
+    <h3>Lorem ipsum dolor sit.</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti numquam voluptatibus magni, quasi enim placeat.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga, doloribus, minima ut nostrum doloremque non atque quis, quos excepturi nam maiores sunt velit perspiciatis quia saepe veniam omnis hic iusto?</p>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi nam quidem rem praesentium non? Nostrum, consequatur voluptatem! Facere, perferendis suscipit?</p>
+    <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Enim tempora debitis, unde atque iste quam, veritatis mollitia quibusdam explicabo error eum maiores reprehenderit impedit laudantium assumenda. Delectus numquam voluptate accusamus eaque nobis ipsa voluptas debitis voluptatibus, voluptatem veritatis aspernatur adipisci?</div>
+     
+    
+    <h2>Al Patrulea</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo ad blanditiis ratione excepturi aspernatur alias inventore accusantium porro cupiditate sapiente ut soluta, quas exercitationem quia expedita veniam. Rerum dicta quod tempore error laudantium explicabo iusto voluptatum id et sed. Iure placeat voluptatem dolorum quisquam ex?</p>
+    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque optio magni totam, eos odio numquam laborum doloremque exercitationem autem quam.</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic dolores quaerat exercitationem eum blanditiis inventore recusandae. Facere mollitia, officia consequuntur distinctio, quod molestias velit eveniet rerum placeat fuga provident. Sapiente?</p>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi ad, accusamus quia neque repellat totam.</p>
+    
+    
+</body>
+</html>
